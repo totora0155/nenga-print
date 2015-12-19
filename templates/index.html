@@ -1,0 +1,8 @@
+<% _forEach(data, _ => { %>
+  <section class="card__box">
+    <% console.log(_) %>
+    <span class="card__name"><%=_.name%></span>
+    <span class="card__postal-code"><%=_.postalCode%></span>
+    <span class="card__address"><%=_.address1%><br><%=_.address2%></span>
+  </section>
+<% }); %>

@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  background: #c8c8c8;
+}
+
+@media print {
+  html,
+  body {
+    width: 100mm;
+    margin:0 !important;
+    padding:0 !important;
+    background: none;
+  }
+}
+
+.gutter {
+  margin-left: 1.5px;
+}
+
+.card__box {
+  position: relative;
+  width: 100mm;
+  height: 148mm;
+  background-image: url(images/postcard.svg);
+  page-break-before: always;
+  page-break-after: always;
+}
+
+@media screen {
+  .card__box {
+    background-color: #fff;
+    margin: 0 auto;
+  }
+}
+
+.card__postal-code,
+.card__address,
+.card__name {
+  position: absolute;
+}
+
+.card__address,
+.card__name {
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+}
+
+.card__postal-code {
+  right: 22px;
+  top: 47px;
+  letter-spacing: 15px;
+  font-size: 1.3em;
+}
+
+.card__address {
+  right: 29px;
+  top: 100px;
+  font-size: 1.2em;
+  text-align: right;
+}
+
+.card__address:first-letter {
+  text-align: left;
+}
+
+.card__name {
+  right: 50%;
+  top: 100px;
+  transform: translateX(50%);
+  letter-spacing: .4em;
+  font-size: 2.6em;
+  height: 60%;
+}
+
+.card__name:after {
+  content: "様";
+  position: absolute;
+  bottom: 0;
+}
